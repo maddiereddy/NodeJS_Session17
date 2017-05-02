@@ -1,0 +1,9 @@
+var fs = require("fs");
+
+var logStream = fs.createWriteStream('input.txt', {'flags': 'a'});
+
+// use {'flags': 'a'} to append and {'flags': 'w'} to erase and write a new file
+logStream.write('\nAppending more text to an existing file!!!!\n');
+logStream.end('this is the end line');
+
+console.log("File appended! Program ended!!");
